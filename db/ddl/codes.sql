@@ -1,4 +1,4 @@
-CREATE TABLE codes (
+CREATE TABLE IF NOT EXISTS codes (
     code VARCHAR(255) NOT NULL PRIMARY KEY,
     semester_id VARCHAR(2) NOT NULL,
     rcrv INTEGER NOT NULL,
@@ -6,7 +6,7 @@ CREATE TABLE codes (
     updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
 
-CREATE TABLE semesters (
+CREATE TABLE IF NOT EXISTS semesters (
     semester_id VARCHAR(2) NOT NULL PRIMARY KEY,
     semester_name VARCHAR(255) NOT NULL,
     semester_year INT NOT NULL,
@@ -14,14 +14,14 @@ CREATE TABLE semesters (
     updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
 
-create table colleges (
+create table IF NOT EXISTS colleges (
     college_id VARCHAR(2) NOT NULL PRIMARY KEY,
     college_name VARCHAR(255) NOT NULL,
     created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
 
-create table branches (
+create table IF NOT EXISTS branches (
     branch_id VARCHAR(2) NOT NULL PRIMARY KEY,
     branch_name VARCHAR(255) NOT NULL,
     created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,

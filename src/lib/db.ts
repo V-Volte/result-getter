@@ -1,5 +1,6 @@
 import sqlite3 from 'sqlite3';
 import * as sqlite from 'sqlite';
+import fs from 'fs';
 
 export class DBInterface {
 	db: sqlite.Database<sqlite3.Database, sqlite3.Statement> = null!;
@@ -18,6 +19,16 @@ export class DBInterface {
 		}
 
 		return true;
+	}
+
+	async createTables() {
+		try {
+			let sql = fs.readFileSync('./db/ddl/codes.sql').toString();
+			await this.db.exec(sql);
+		} catch (e) {
+			console.error(e);
+			return false;
+		}
 	}
 
 	async close() {

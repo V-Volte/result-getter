@@ -5,19 +5,17 @@ import axios from 'axios';
 
 const url = 'http://results.jntuh.ac.in/jsp/home.jsp';
 
-if (!building) {
-	console.log('Initializing');
+console.log('Initializing');
 
-	await database.init();
+await database.init();
 
-	console.log('Initialized');
+console.log('Initialized');
 
-	const { data } = await axios.get(url);
+const { data } = await axios.get(url);
 
-	await getExamCodes(data, database);
+await getExamCodes(data, database);
 
-	console.log('Got exam codes');
-}
+console.log('Got exam codes');
 
 import type { HandleServerError } from '@sveltejs/kit';
 

@@ -1,0 +1,43 @@
+{
+  "version": "3",
+  "remote": {
+    "https://edge.netlify.com/": "ff84a16f192fdb43db8b9dff869889f555c05857d075044d2a7cfa54c283a0a0",
+    "https://edge.netlify.com/bootstrap/config.ts": "0aa0a225d978b89e0e62cbd853701605199e7a84095e55eeb70147faf1a24803",
+    "https://edge.netlify.com/bootstrap/context.ts": "8f99269eeeeccf9b852e6089cc648c962a0ea20b2198b8b38b38e3b2ce2b9143",
+    "https://edge.netlify.com/bootstrap/cookie.ts": "8b0baae708989ca183c6f3b4ab3d029e6abcbc2e43f93edeb0ff447b3bbc3a05",
+    "https://edge.netlify.com/bootstrap/edge_function.ts": "b8253e86aa83c67341f5cfedeba5049d77fbf84dcab7eceff7566b7728ae9b39",
+    "https://edge.netlify.com/bootstrap/globals.ts": "38f9e0be6c2c78206bf14d2387d41964d38bbe81644b3668e203c6f6473408a7"
+  },
+  "workspace": {
+    "packageJson": {
+      "dependencies": [
+        "npm:@playwright/test@^1.28.1",
+        "npm:@sveltejs/adapter-auto@^3.0.0",
+        "npm:@sveltejs/adapter-netlify@^4.2.1",
+        "npm:@sveltejs/kit@^2.0.0",
+        "npm:@sveltejs/vite-plugin-svelte@^3.0.0",
+        "npm:@types/eslint@^8.56.7",
+        "npm:@types/node@^20.14.8",
+        "npm:axios@^1.7.2",
+        "npm:cheerio@^1.0.0-rc.12",
+        "npm:eslint-config-prettier@^9.1.0",
+        "npm:eslint-plugin-svelte@^2.36.0",
+        "npm:eslint@^9.0.0",
+        "npm:globals@^15.0.0",
+        "npm:jssoup@^0.0.15",
+        "npm:prettier-plugin-svelte@^3.1.2",
+        "npm:prettier@^3.1.1",
+        "npm:sass@^1.77.6",
+        "npm:sqlite3@^5.1.7",
+        "npm:sqlite@^5.1.1",
+        "npm:svelte-check@^3.6.0",
+        "npm:svelte@^4.2.7",
+        "npm:tslib@^2.4.1",
+        "npm:typescript-eslint@^8.0.0-alpha.20",
+        "npm:typescript@^5.0.0",
+        "npm:vite@^5.0.3",
+        "npm:vitest@^1.2.0"
+      ]
+    }
+  }
+}
