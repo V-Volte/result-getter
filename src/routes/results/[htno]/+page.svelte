@@ -20,7 +20,7 @@
 	const share = async () => {
 		const shareData = {
 			title: `${x.name} | result-getter - Aggregate results`,
-			text: `Check out ${x.name}'s results on result-getter. ${x.cgpa && `Their CGPA is ${x.cgpa?.toFixed(2)}}!`}`,
+			text: `Check out ${x.name}'s results on result-getter. ${x.cgpa && `Their CGPA is ${x.cgpa?.toFixed(2)}!`}`,
 			url: window.location.href
 		};
 
