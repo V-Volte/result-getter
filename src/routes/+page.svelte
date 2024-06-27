@@ -2,6 +2,10 @@
 	export const isMainPage = true;
 </script>
 
+<svelte:head>
+	<title>result-getter</title>
+</svelte:head>
+
 <div class="main-page">
 	<div class="title">result-getter</div>
 
