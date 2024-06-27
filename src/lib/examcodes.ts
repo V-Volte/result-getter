@@ -8,7 +8,7 @@ export type code = {
 	semester_id: number;
 };
 
-export default async function getExamCodes(data: string) {
+export default function getExamCodes(data: string) {
 	const $ = cheerio.load(data);
 
 	const trs = $($('table')[0]).find('tr');

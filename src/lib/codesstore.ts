@@ -117,7 +117,14 @@ export class CodesStore {
 	}
 
 	addCodes(codes: code[]) {
+		let codeAddedMap = new Map<string, boolean>();
+
 		for (let code of codes) {
+			if (!codeAddedMap.has(code.code)) {
+				codeAddedMap.set(code.code, true);
+			} else {
+				continue;
+			}
 			let semester = this.getSemesterById(code.semester_id);
 			if (semester) {
 				this.addCodeToSemester(code.semester_id, {

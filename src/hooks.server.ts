@@ -10,7 +10,7 @@ console.log('Initialized');
 
 const { data } = await axios.get(url);
 
-const codes = await getExamCodes(data);
+const codes = getExamCodes(data);
 
 console.log('Got exam codes');
 
