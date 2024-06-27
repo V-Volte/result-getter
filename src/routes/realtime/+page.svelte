@@ -2,6 +2,10 @@
 	// Add any necessary script logic here
 </script>
 
+<svelte:head>
+	<title>Under Construction | Real-time Results</title>
+</svelte:head>
+
 <div class="container">
 	<h1>In Construction</h1>
 	<p>This page is currently under construction. Please check back later.</p>

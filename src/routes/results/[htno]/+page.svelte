@@ -18,6 +18,10 @@
 	$: x = data;
 </script>
 
+<svelte:head>
+	<title>{x.htno} | result-getter - Aggregate results</title>
+</svelte:head>
+
 <div class="results-container">
 	<div class="header">
 		<div class="name">{x.name}</div>

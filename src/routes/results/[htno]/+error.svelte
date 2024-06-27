@@ -2,6 +2,10 @@
 	export let htno;
 </script>
 
+<svelte:head>
+	<title>Error | result-getter</title>
+</svelte:head>
+
 <main>
 	<h1>Invalid Hall Ticket Number</h1>
 	<p>The hall ticket number <strong>{htno}</strong> is invalid.</p>
