@@ -2,8 +2,6 @@ import { getSubjects, getValueFromGrade } from './subjects';
 import type { subject } from './subjects';
 import axios from 'axios';
 
-import { database } from './store.mjs';
-
 let codesmap: {
 	code: string;
 	rcrv: boolean;
@@ -12,9 +10,7 @@ let codesmap: {
 	semester_id: number;
 }[] = [];
 
-codesmap = await database.getCodeSemesterMap();
-
-const codes = codesmap;
+import { codesStore } from './codesstore';
 
 const url = 'http://results.jntuh.ac.in/resultAction';
 
@@ -83,6 +79,8 @@ export function normalizeResults(
 	cgpa: number;
 } {
 	let semesterSubjectCodeMap = new Map<string, Set<string>>();
+
+	const codes = codesStore.getCodes();
 
 	for (let code of codes) {
 		let resultsWithThisCode = results.filter((result) => result.examCode === parseInt(code.code));
@@ -171,6 +169,8 @@ export function normalizeResults(
 
 export async function getAllResults(htno: string, degree: string = 'btech') {
 	let promises = [];
+
+	const codes = codesStore.getCodes();
 
 	for (let code of codes) {
 		promises.push(getSingleResult(htno, parseInt(code.code), degree));

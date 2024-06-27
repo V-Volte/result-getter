@@ -23,6 +23,7 @@ vite.config.ts.timestamp-*
 # Local Netlify folder
 .netlify
 
-# # database
-# main.db
-# *.db
+# database
+db/*
+db
+/db

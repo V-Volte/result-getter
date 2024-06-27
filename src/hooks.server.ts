@@ -2,24 +2,21 @@ import { building } from '$app/environment';
 import getExamCodes from '$lib/examcodes';
 import { database } from '$lib/store.mjs';
 import axios from 'axios';
+import { codesStore } from '$lib/codesstore';
 
 const url = 'http://results.jntuh.ac.in/jsp/home.jsp';
 
-console.log('Initializing');
-
-await database.init();
-
 console.log('Initialized');
-
-await database.createTables();
-
-console.log('Created tables');
 
 const { data } = await axios.get(url);
 
-await getExamCodes(data, database);
+const codes = await getExamCodes(data);
 
 console.log('Got exam codes');
+
+codesStore.addCodes(codes);
+
+console.log('Added codes');
 
 import type { HandleServerError } from '@sveltejs/kit';
 
@@ -27,7 +24,8 @@ export const handleError: HandleServerError = async ({ error, event, status, mes
 	const errorId = crypto.randomUUID();
 
 	return {
-		message: 'Whoops!',
+		message: `Whoops! This was a ${status} error. Please try again later. Error ID: ${errorId}`,
+		emsg: message,
 		errorId
 	};
 };

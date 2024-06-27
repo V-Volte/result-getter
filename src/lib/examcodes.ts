@@ -2,15 +2,13 @@ import * as cheerio from 'cheerio';
 import axios from 'axios';
 import fs from 'fs';
 
-import { DBInterface } from './db';
-
 export type code = {
 	code: string;
 	rcrv: boolean;
 	semester_id: number;
 };
 
-export default async function getExamCodes(data: string, db: DBInterface) {
+export default async function getExamCodes(data: string) {
 	const $ = cheerio.load(data);
 
 	const trs = $($('table')[0]).find('tr');
@@ -52,6 +50,5 @@ export default async function getExamCodes(data: string, db: DBInterface) {
 	// for (let key in codesDictionary) {
 	// 	codesDictionary[key] = [...new Set(codesDictionary[key])];
 	// }
-	await db.clearAllCodes();
-	await db.addCodes(codeList);
+	return codeList;
 }
