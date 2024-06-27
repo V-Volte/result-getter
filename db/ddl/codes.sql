@@ -27,3 +27,12 @@ create table IF NOT EXISTS branches (
     created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
+
+INSERT INTO semesters (semester_id, semester_name, semester_year) VALUES ('11', 'I year I semester', 1);
+INSERT INTO semesters (semester_id, semester_name, semester_year) VALUES ('12', 'I year II semester', 1);
+INSERT INTO semesters (semester_id, semester_name, semester_year) VALUES ('21', 'II year I semester', 2);
+INSERT INTO semesters (semester_id, semester_name, semester_year) VALUES ('22', 'II year II semester', 2);
+INSERT INTO semesters (semester_id, semester_name, semester_year) VALUES ('31', 'III year I semester', 3);
+INSERT INTO semesters (semester_id, semester_name, semester_year) VALUES ('32', 'III year II semester', 3);
+INSERT INTO semesters (semester_id, semester_name, semester_year) VALUES ('41', 'IV year I semester', 4);
+INSERT INTO semesters (semester_id, semester_name, semester_year) VALUES ('42', 'IV year II semester', 4);

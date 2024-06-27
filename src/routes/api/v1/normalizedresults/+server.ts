@@ -13,5 +13,7 @@ export const GET: RequestHandler = async ({ url }) => {
 
 	const normalizedResults = normalizeResults(result);
 
+	console.log(`HTNO ${htno}`);
+
 	return new Response(JSON.stringify(normalizedResults));
 };

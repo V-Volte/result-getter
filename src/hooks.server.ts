@@ -11,6 +11,10 @@ await database.init();
 
 console.log('Initialized');
 
+await database.createTables();
+
+console.log('Created tables');
+
 const { data } = await axios.get(url);
 
 await getExamCodes(data, database);

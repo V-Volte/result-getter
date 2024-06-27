@@ -51,13 +51,13 @@ export async function getSingleResult(
 
 		if (response.headers['Content-Length'] == 3774) throw new Error('Invalid response');
 
-		console.log('Request completed');
+		//console.log('Request completed');
 
 		const subjects = getSubjects(response.data);
 		if (subjects.error) throw new Error('Invalid response');
 		return { examCode: examCode, ...subjects };
 	} catch (err: any) {
-		console.log('error');
+		console.error('error');
 		return {
 			examCode: examCode,
 			name: '',
@@ -99,7 +99,7 @@ export function normalizeResults(
 		);
 	}
 
-	console.dir(semesterSubjectCodeMap, { depth: 4 });
+	//console.dir(semesterSubjectCodeMap, { depth: 4 });
 
 	let listOfSubjects = results.flatMap((result) => result.subjects);
 
