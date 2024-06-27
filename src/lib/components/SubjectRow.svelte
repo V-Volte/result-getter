@@ -312,4 +312,18 @@
 			}
 		}
 	}
+
+	@media print {
+		* {
+			print-color-adjust: exact;
+		}
+
+		.invisible {
+			display: flex;
+		}
+
+		.left {
+			width: 40vw !important;
+		}
+	}
 </style>

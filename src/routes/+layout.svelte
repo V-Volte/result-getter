@@ -248,4 +248,10 @@
 			display: none;
 		}
 	}
+
+	@media print {
+		.navbar {
+			display: none;
+		}
+	}
 </style>

@@ -91,4 +91,10 @@
 			left: 0;
 		}
 	}
+
+	@media print {
+		* {
+			print-color-adjust: exact;
+		}
+	}
 </style>
